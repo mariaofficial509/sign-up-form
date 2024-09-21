@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    background: linear-gradient(#9d50bb,#6e48aa);
+}
+.container{
+    padding: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+.container .form-container{
+    padding: 30px;
+    width: 350px;
+    height: 440px;
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    border-radius: 7px;
+    box-shadow: 0 7px 29px 0 rgba(0,0,0,0.3);
+}
+.container .form-container h3{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 35px;
+    letter-spacing: 2px;
+}
+.container .sign-in .username ,
+.container .sign-in .password ,
+.container .sign-up div
+{
+    height: 45px;
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.container .sign-in .username ,
+.container .sign-up .username{
+    margin-top: 30px;
+}
+.container .sign-in .username input ,
+.container .sign-in .password input ,
+.container .sign-up div input{
+    all: unset;
+    width: 100%;
+    height: 42px;
+    padding-left: 15px;
+
+}
+.container .sign-in .username label,
+.container .sign-in .password label ,
+.container .sign-up div label{
+    position: relative;
+    top:-32px;
+    left:15px;
+    transition: all 0.2s;
+    font-size: 15px;
+
+}
+.sign-in .username input:focus ~ #signin-username-label ,
+.sign-in .username input:valid ~ #signin-username-label ,
+.sign-in .password input:focus ~ #signin-password-label ,
+.sign-in .password input:valid ~ #signin-password-label{
+    top: -55px;
+    font-size: 12px;
+    transition: all 0.2s;
+    background-color: #fff;
+    padding: 2px;
+}
+.sign-up div input:focus ~ label ,
+.sign-up div input:valid ~ label
+{
+    top: -55px;
+    font-size: 12px;
+    transition: all 0.2s;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.container .sign-in .password input::-ms-reveal,
+.container .sign-up .password input::-ms-reveal,
+.container .sign-up .confrim-password input::-ms-reveal
+{
+    display:none;
+}
+.container .sign-in .forgt-password{
+    position: relative;
+    top: 5px;
+    font-size: 13px;
+}
+.container .sign-in .login-btn ,
+.container .sign-up .sign-up-btn{
+    all: unset;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(#9d50bb,#6e48aa);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.container .sign-in .dnt-account ,
+.container .sign-up .alrdy-account{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+.container .sign-in .dnt-account span ,
+.container .sign-up .alrdy-account span{
+    text-decoration: underline;
+    color: #9d50bb;
+    cursor: pointer;
+}
+.container .sign-up h3{
+    margin-top: 10px;
+}
+.container .sign-in {
+    z-index: 1;
+}
+.container .sign-up {
+    transform: translate(-50%,-50%) rotate(7deg);
+}
+.container.animated-signin .sign-in{
+
+    animation: signin 1s ease-in-out forwards ;
+}
+.container.animated-signup .sign-up{
+
+    animation: signup 1s ease-in-out forwards ;
+}
+.container.animated-signin .sign-up{
+    animation: rotate-card 0.7s ease-in-out forwards;
+}
+.container.animated-signup .sign-in{
+    animation: rotate-card-signin 0.7s ease-in-out forwards;
+    transform: translate(-50%,-50%) rotate(7deg);
+    animation-delay: 0.3s;
+}
+
+@keyframes signin{
+    0%{
+        transform: translate(-50%, -50%) translateX(0);
+    }
+    50%{
+         transform: translate(-50%, -50%) translateX(-25rem);
+    }
+    100%{
+        transform: translate(-50% ,-50%) translateX(0) rotate(7deg) scale(1);
+       }
+}
+@keyframes signup{
+    0%{
+        transform: translate(-50%, -50%) translateX(0);
+        z-index: 1;
+    }
+    50%{
+         transform: translate(-50%, -50%) translateX(25rem);
+    }
+    100%{
+        transform: translate(-50% ,-50%) translateX(0) rotate(7deg) scale(1);
+       }
+}
+@keyframes rotate-card{
+    0%{
+        transform: translate(-50%, -50%) rotate(7deg);
+    
+    }
+    100%{
+        transform: translate(-50% ,-50%)  rotate(0) ;
+        z-index: 1;
+       }
+}
+@keyframes rotate-card-signin{
+    0%{
+        transform: translate(-50%, -50%) rotate(7deg);
+    
+    }
+    100%{
+        transform: translate(-50% ,-50%)  rotate(0) ;
+        z-index: 1;
+       }
+
+}

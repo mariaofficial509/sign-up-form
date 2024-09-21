@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-container sign-in">
+            <form action="#">
+                <h3>login</h3>
+                <div class="username">
+                    <input type="text"  id=" signin-username" required>
+                    <label id="signin-username-label" for="signin-username"><i class="fa-solid fa-user"></i>username</label>
+                </div>
+                <div class="password">
+                    <input type="number" id=" signin-password" required>
+                    <label id="signin-password-label" for="signin-password"><i class="fa-solid fa-lock"></i>password</label>
+                </div>
+                <span class="forgt-password">forget password?</span>
+                <button class="login-btn">login</button>
+                <p class="dnt-account">don't have an account?<span onclick="signup()">  sign up</span></p>
+            </form>
+        </div>
+
+       <div class="form-container sign-up">
+            <form action="#">
+                <h3>sign-up</h3>
+                <div class="username">
+                    <input type="text"  id="signup-username" required>
+                    <label  for="signup-username"><i class="fa-solid fa-user"></i>username</label>
+                </div>
+                <div class="email">
+                    <input type="email" id=" signup-email" required>
+                    <label  for="signup-email"><i class="fa-solid fa-envelope"></i>email</label>
+                </div>
+                <div class="password">
+                    <input type="number" id=" signup-password" required>
+                    <label  for="signup-password"><i class="fa-solid fa-lock"></i>password</label>
+                </div>
+                <div class=" confrim-password">
+                    <input type="number" id=" confrim-signup-password" required>
+                    <label  for= " confrim-signup-password"><i class="fa-solid fa-lock"></i> confrim password</label>
+                </div>
+                <button class="sign-up-btn">sign-up</button>
+                <p class="alrdy-account"> already have an account?<span onclick="signin()"> sign up</span></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
